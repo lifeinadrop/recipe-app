@@ -8,4 +8,6 @@ body {
 }
 .wrapper {
     display: grid;
+    gap: 15px;
+    border: 1px solid black;
 }
