@@ -6,9 +6,16 @@ body {
     width: 100%;
     height: 100%;
 }
-.wrapper {
+.card-container {
     display: grid;
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px 10px;
+}
+.recipe-card {
+    display: grid;
+    grid-template-areas: "rN rN rN"
+                         "i i q"
+                         "eT eT eT";
     width: 50%;
     height: 90%;
     border: 1px solid black;
@@ -16,15 +23,29 @@ body {
     margin-left: auto;
 }
 .recipe-name {
-    width: 100%;
-    height: 65px;
+    grid-area: rN;
+    align-self: start;
+    height: 75px;
     border: 1px solid green;
 }
 .recipe-name h1 {
     padding-left: 2%;
 }
 .ingredients {
-    width: 65%;
-    height: 100%;
+    grid-area: i;
+    align-self: center;
+    height: 30em;
     border: 1px solid blue;
+}
+.quantity {
+    grid-area: q;
+    align-self: center;
+    height: 30em;
+    border: 1px solid orange;
+}
+.estimated-time {
+    grid-area: eT;
+    height: 75px;
+    align-self: end;
+    border: 1px solid purple;
 }
